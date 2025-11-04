@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập / Đăng Ký - Hiệu Sách SGU</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login-style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <script src="../js/main.js" defer></script>
+    <script src="../js/login-script.js" defer></script>
+</head>
+<body>
+<div id="cart-overlay" class="cart-overlay"></div> 
+<header class="header">
+    <div class="main-header">
+        <div class="container">
+            <a href="../index.html" class="logo">Hiệu Sách SGU</a>
+            <div class="search-area">
+                <input type="text" placeholder="Tìm kiếm sách...">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-actions">
+                <div class="action-item"> <i class="far fa-bell"></i>
+                    <span>Thông Báo</span>
+                </div>
+                <a href="login.html" class="action-item" id="account-link">
+                    <i class="far fa-user"></i>
+                    <span>Tài Khoản</span>
+                </a>
+                <div class="action-item cart-icon open-cart-trigger">
+                    <a href="#" class="open-cart-trigger"><i class="fas fa-shopping-cart"></i></a>
+                    <span>Giỏ Hàng</span>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+
+    <div class="auth-container">
+        </div>
+
+    <div id="forgot-password-modal" class="modal">
+        </div>
+
+    <footer class="footer">
+        </footer>
+
+    <div id="add-to-cart-toast" class="toast-message">
+        <div class="toast-icon-wrapper">
+            <i class="fas fa-check"></i>
+        </div>
+        <p>Sản phẩm đã được thêm vào giỏ hàng.</p>
+    </div>
+
+    <div id="side-cart-container" class="side-cart-container">
+        <div id="cart-view">
+            <div class="side-cart-header">
+                <h3>Giỏ hàng của bạn</h3>
+                <button id="close-cart-btn" class="close-btn">&times;</button>
+            </div>
+            <div id="side-cart-body" class="cart-body">
+                <p class="cart-empty-message">Giỏ hàng của bạn đang trống.</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Tổng cộng:</strong>
+                    <span id="cart-total-price">0đ</span>
+                </div>
+                <button id="go-to-checkout-btn" class="btn checkout-btn">Thanh toán</button>
+            </div>
+        </div>
+        <div id="checkout-view" class="hidden">
+            <div class="side-cart-header">
+                <h3>Thông tin giao hàng</h3>
+                <button id="back-to-cart-btn" class="back-btn"><i class="fas fa-arrow-left"></i> Quay lại</button>
+            </div>
+            <div class="checkout-form-body">
+                <form id="checkout-form">
+                    </form>
+            </div>
+            <div class="cart-footer">
+                <button type="submit" form="checkout-form" class="btn checkout-btn">ĐẶT HÀNG</button>
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>
